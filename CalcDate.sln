@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34728.123
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalcDate", "CalcDate.csproj", "{1F146087-BD34-4536-8AF9-43FF3E2F30D3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1F146087-BD34-4536-8AF9-43FF3E2F30D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F146087-BD34-4536-8AF9-43FF3E2F30D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1F146087-BD34-4536-8AF9-43FF3E2F30D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1F146087-BD34-4536-8AF9-43FF3E2F30D3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DE1B2F3D-609E-4F71-8693-C0255C81CF08}
+	EndGlobalSection
+EndGlobal
