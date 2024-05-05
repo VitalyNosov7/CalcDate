@@ -1,4 +1,6 @@
-﻿namespace CalcDate
+﻿using CalcDate.Controller;
+
+namespace CalcDate
 {
     public class Program
     {
@@ -9,56 +11,61 @@
 
         public static void Main()
         {
-            DateTime CheckInDate = new DateTime();
-            DateTime DepartureDate = new DateTime();
-            DateTime CurrentDate = new DateTime();
 
-            TimeSpan Interval;
+            PeriodController  PeriodContr = new PeriodController();
+            PeriodContr.ShowCurrentPeriod();
+
+            // Это рабочий код. Не удалять!
+            //DateTime CheckInDate = new DateTime();
+            //DateTime DepartureDate = new DateTime();
+            //DateTime CurrentDate = new DateTime();
+
+            //TimeSpan Interval;
 
 
-            ConsoleKeyInfo btn;
-            do
-            {
-                Console.WriteLine("Версия: 0.0.1 ");
+            //ConsoleKeyInfo btn;
+            //do
+            //{
+            //    Console.WriteLine("Версия: 0.0.1 ");
 
-                CurrentDate = DateTime.Now;
+            //    CurrentDate = DateTime.Now;
 
-                //Console.Write("Введите дату заезда: ");
-                CheckInDate = GetInputDate("Введите дату заезда: ");
+            //    //Console.Write("Введите дату заезда: ");
+            //    CheckInDate = GetInputDate("Введите дату заезда: ");
 
-                //Console.Write("Введите дату выезда: ");
-                DepartureDate = GetInputDate("Введите дату выезда: ");
+            //    //Console.Write("Введите дату выезда: ");
+            //    DepartureDate = GetInputDate("Введите дату выезда: ");
 
-                Interval = DepartureDate - CheckInDate;
+            //    Interval = DepartureDate - CheckInDate;
 
-                Console.ForegroundColor = ConsoleColor.Green;
+            //    Console.ForegroundColor = ConsoleColor.Green;
 
-                Console.WriteLine($"Колво дней: {(Interval).Days}");
+            //    Console.WriteLine($"Колво дней: {(Interval).Days}");
 
-                Console.ResetColor();
+            //    Console.ResetColor();
 
-                Interval = CheckInDate.AddDays(1) - CurrentDate;
+            //    Interval = CheckInDate.AddDays(1) - CurrentDate;
 
-                if (Interval.Days <= 14)
-                {
-                    Console.ForegroundColor = ConsoleColor.Red;
-                }
-                else
-                {
-                    Console.ForegroundColor = ConsoleColor.Green;
-                }
+            //    if (Interval.Days <= 14)
+            //    {
+            //        Console.ForegroundColor = ConsoleColor.Red;
+            //    }
+            //    else
+            //    {
+            //        Console.ForegroundColor = ConsoleColor.Green;
+            //    }
 
-                Console.WriteLine($"До заезда остаётся(дня(ей)): {(Interval).Days}");
+            //    Console.WriteLine($"До заезда остаётся(дня(ей)): {(Interval).Days}");
 
-                Console.ResetColor();
+            //    Console.ResetColor();
 
-                Console.WriteLine("Для продолжения нажмите любую клавишу. Для выхода нажмите [ESC]");
+            //    Console.WriteLine("Для продолжения нажмите любую клавишу. Для выхода нажмите [ESC]");
 
-                
 
-                btn = Console.ReadKey();
-            }
-            while (!(btn.Key == ConsoleKey.Escape));
+
+            //    btn = Console.ReadKey();
+            //}
+            //while (!(btn.Key == ConsoleKey.Escape));
         }
 
         public static DateTime GetInputDate(String message)
