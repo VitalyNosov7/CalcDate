@@ -2,6 +2,7 @@
 
 namespace CalcDate.View
 {
+    /// <summary>Отображение информации по периоду на экране</summary>
     public class PeriodView
     {
         /// <summary>Сообщение, выводимое на экран</summary>
@@ -17,15 +18,25 @@ namespace CalcDate.View
         /// <summary>Новый экземпляр вида отображения периода времени</summary>
         public PeriodView() { }
 
-        public void ShowMessage()
+        /// <summary>Вывод информационного сообщения</summary>
+        public void ShowMessage(ConsoleColor foregroundСolor)
         {
-            Console.WriteLine(Message);
+            Console.ForegroundColor = foregroundСolor;
+            Console.Write(_Message);
+            ClearMessage();
+            Console.ResetColor();
+        }
+
+        /// <summary>Очистить данные (Сообщение в поле _Message)</summary>
+        public void ClearMessage()
+        {
+            _Message.Clear();
         }
 
         /// <summary>Вывод строкового значения сообщения</summary>
         public override string ToString()
         {
-            return $"(Экземпляр класса PeriodView:\n{Message}";
+            return $"(Экземпляр класса PeriodView:\n{_Message}";
         }
     }
 }
