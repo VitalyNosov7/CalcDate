@@ -1,9 +1,10 @@
-﻿using CalcDate.Model.Base;
+﻿using CalcDate.Interfaces;
+using CalcDate.Model.Base;
 using CalcDate.View;
 
 namespace CalcDate.Controller
 {
-    public class PeriodController
+    public class PeriodController : IPeriod
     {
         /// <summary>Обрабатываемый период времени</summary>
         private Period _CurrentPeriod = new Period();
@@ -26,6 +27,16 @@ namespace CalcDate.Controller
         {
             CurrentPeriod = currentPeriod;
         }
+
+        /// <summary>Создать новый период времени (с параметрами)</summary>
+        /// <param name="startOfPeriod">Начало периода времени</param>
+        /// <param name="endOfPeriod">Конец периода времени</param>
+        public void CreateNewPeriod(DateTime startOfPeriod, DateTime endOfPeriod)
+        {
+            CurrentPeriod = new Period(startOfPeriod, endOfPeriod);
+        }
+
+
 
         /// <summary>Вывести на экран период времени</summary>
         public void ShowCurrentPeriod()
